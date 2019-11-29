@@ -21,7 +21,8 @@ function getListeSeries(table){
 				var cellSaisons = row.insertCell(2);
 				cellnom.innerText = lesSeries[i].nom;
 				cellannee.innerText = lesSeries[i].anneeparution;
-				getNbSaisons(lesSeries[i].id, cellSaisons);
+				cellSaisons.innerHTML = "<button id='saisons' value='"+ lesSeries[i].id +"'>Voir Saisons</button>";
+				//getNbSaisons(lesSeries[i].id, cellSaisons);
 				row.setAttribute("tag", lesSeries[i].id);
 				cellnom.style.textAlign = "left";
 				cellnom.style.paddingLeft = "10px";
